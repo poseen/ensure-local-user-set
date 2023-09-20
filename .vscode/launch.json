@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}/src",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Debug Installer",
+            "type": "python",
+            "request": "launch",
+            "program": "install.py",
+            "cwd": "${workspaceFolder}/src",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Debug hook (env. var)",
+            "type": "python",
+            "request": "launch",
+            "program": "pre-commit.py",
+            "args": [
+                "${env:PRE_COMMIT_HOOK_TEST_GIT_REPO}"
+            ],
+            "cwd": "${workspaceFolder}/src",
+            "console": "integratedTerminal"
+        }
+    ]
+}
+
+
